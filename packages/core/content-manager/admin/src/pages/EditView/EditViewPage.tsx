@@ -8,6 +8,7 @@ import {
   useQueryParams,
   tours,
   Layouts,
+  useIsMobile,
 } from '@strapi/admin/strapi-admin';
 import { Grid, Tabs, Box } from '@strapi/design-system';
 import { useIntl } from 'react-intl';
@@ -46,6 +47,8 @@ const EditViewPage = () => {
   });
   const { formatMessage } = useIntl();
   const { toggleNotification } = useNotification();
+
+  const isMobile = useIsMobile();
 
   const doc = useDoc();
   const {
@@ -197,7 +200,7 @@ const EditViewPage = () => {
               </Tabs.List>
               <Grid.Root
                 paddingTop={{
-                  initial: 2,
+                  initial: 6,
                   medium: 4,
                   large: 8,
                 }}
@@ -208,10 +211,10 @@ const EditViewPage = () => {
                     <tours.contentManager.Fields>
                       <Box />
                     </tours.contentManager.Fields>
-                    <FormLayout layout={layout} document={doc} />
+                    <FormLayout layout={layout} document={doc} hasBackground={!isMobile} />
                   </Tabs.Content>
                   <Tabs.Content value="published">
-                    <FormLayout layout={layout} document={doc} />
+                    <FormLayout layout={layout} document={doc} hasBackground={!isMobile} />
                   </Tabs.Content>
                 </Grid.Item>
                 <Grid.Item col={3} xs={12} direction="column" alignItems="stretch">
