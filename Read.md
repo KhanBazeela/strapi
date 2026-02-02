@@ -1,3 +1,4 @@
+Strapi Local Setup Task
 Overview
 This project demonstrates the local setup of a Strapi application, running the admin panel, and creating a sample content type as part of the internship task.
 
@@ -12,8 +13,8 @@ BlogPost
 
 Title (Text)
 Body (Rich Text)
-Published (Boolean)
 
+Published (Boolean)
 Notes
 The official Strapi GitHub repository is a monorepo containing source code.
 For local development with the admin panel, a Strapi application was created using the recommended Strapi approach.
@@ -23,4 +24,3 @@ Strapi application is running successfully on the local system/VM.
 
 Loom Video
 https://www.loom.com/share/64eaca564dcf4b9f8623eb652b459dbe
-np
